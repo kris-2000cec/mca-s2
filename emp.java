@@ -1,0 +1,66 @@
+import java.util.*;
+class emp
+{	
+	int empno,salary;
+	String empname;
+	void read()
+	{
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter employee no. ..");
+		empno=sc.nextInt();
+		System.out.println("Enter employee name...");
+		empname=sc.nextLine();
+		System.out.println("Enter employee Salary...");
+		salary=sc.nextInt();
+		 
+	}
+	void search()
+	{
+		Scanner s=new Scanner(System.in);
+		empno=s.nextInt();
+		int i,f=0;
+		for(i=0;i<3;i++)
+		{
+			if(empno == obj[i])			
+				f=1;
+			
+		}
+		if(f==1)
+			obj[i].display();
+		
+	}
+	void display()
+	{
+		System.out.println("empno : "+empno);
+		System.out.println("empname : "+empname);
+		System.out.println("salary : "+salary);
+	}
+	
+	
+	
+	
+	
+	
+	public static void main(String arg[])
+	
+	{
+		emp obj[]=new emp[3];
+		int i;
+		for(i=0;i<3;i++)
+		{
+			obj[i]=new emp();
+		}
+		for(i=0;i<3;i++)
+		{
+			obj[i].read();
+		}
+		System.out.println("Enter employee no to search if it exit . ..");
+		for(i=0;i<3;i++)
+		{
+			obj[i].search();
+			
+			
+		}
+	}
+}
